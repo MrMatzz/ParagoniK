@@ -1,50 +1,33 @@
-# Welcome to your Expo app 👋
+# ParagoniK
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+ParagoniK to nowoczesna, inteligentna aplikacja do śledzenia wydatków, stworzona przy użyciu React Native i Node.js. Eliminuje problem ręcznego wprowadzania danych, wykorzystując sztuczną inteligencję Google Gemini do automatycznego wyodrębniania danych z paragonów (nazwa sklepu, dokładna kwota i kategoria) bezpośrednio ze zdjęć.
 
-## Get started
+## Kluczowe funkcje
 
-1. Install dependencies
+* **Skaner paragonów AI:** Zrób zdjęcie paragonu lub wybierz je z galerii. Backend aplikacji łączy się z Gemini AI, aby błyskawicznie przeanalizować dane i przypisać wydatek do odpowiedniej kategorii.
+* **Szybkie wprowadzanie ręczne:** Uproszczony interfejs do wprowadzania codziennych wydatków gotówkowych, zawierający przyciski szybkiego wyboru kwot oraz estetyczne, oznaczone kolorami kategorie.
+* **Zapis danych offline:** Cała historia finansowa jest bezpiecznie przechowywana w pamięci urządzenia za pomocą `AsyncStorage`. Twoje dane zostają z Tobą, nawet bez połączenia z internetem.
+* **Intuicyjne gesty:** Pomyłka przy dodawaniu? Po prostu przesuń palcem w lewo na dowolnym wydatku w historii, aby płynnie go usunąć.
+* **Dynamiczne motywy:** Pełne wsparcie dla trybu jasnego i ciemnego, automatycznie dostosowujące się do preferencji systemowych użytkownika.
+* **Reakcja haptyczna:** Uczucie obcowania z aplikacją premium dzięki delikatnym wibracjom (`expo-haptics`) podczas interakcji z kluczowymi elementami interfejsu.
 
-   ```bash
-   npm install
-   ```
+## Technologie
 
-2. Start the app
+**Frontend (Aplikacja mobilna)**
+* React Native & Expo (Expo Router)
+* TypeScript
+* `react-native-gesture-handler` (Usuwanie gestem przesunięcia)
+* `@react-native-async-storage/async-storage` (Lokalna baza danych)
+* `expo-camera`, `expo-image-picker`, `expo-image-manipulator` (Obsługa multimediów)
 
-   ```bash
-   npx expo start
-   ```
+**Backend (API)**
+* Node.js & Express
+* `@google/generative-ai` (Integracja z modelem Gemini)
+* `multer` (Obsługa przesyłania plików)
 
-In the output, you'll find options to open the app in a
+## Jak uruchomić lokalnie
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Sklonuj repozytorium.
+2. Zainstaluj zależności:
 ```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+   npm install
