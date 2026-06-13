@@ -31,3 +31,11 @@ ParagoniK to nowoczesna, inteligentna aplikacja do śledzenia wydatków, stworzo
 2. Zainstaluj zależności:
 ```bash
    npm install
+```
+1. Uruchom serwer deweloperski Expo:
+```bash
+ npx expo start -c
+```
+Zeskanuj kod QR za pomocą aplikacji Expo Go na swoim fizycznym urządzeniu.
+
+* Stworzone jako inteligentne rozwiązanie do zarządzania finansami osobistymi.
